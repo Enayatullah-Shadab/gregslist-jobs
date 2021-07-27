@@ -8,9 +8,6 @@ export class JobsController extends BaseController {
       .get('', this.getAll)
       .get('/:id', this.getById)
       .post('', this.create)
-      .put('/:id')
-      .put('/:id/')
-      .delete('/:id')
   }
 
   async getAll(req, res, next) {

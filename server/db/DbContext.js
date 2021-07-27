@@ -1,4 +1,4 @@
-import JobSchema from '../models/Value'
+import JobSchema from '../models/Job'
 import mongoose from 'mongoose'
 
 class DbContext {
