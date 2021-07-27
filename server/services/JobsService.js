@@ -27,5 +27,13 @@ class JobsService {
     }
     return job
   }
+
+  async delete(id) {
+    const job = await dbContext.Jobs.findByIdAndDelete(id)
+    if (!job) {
+      throw new BadRequest('Invalid id')
+    }
+    return job
+  }
 }
 export const jobsService = new JobsService()
