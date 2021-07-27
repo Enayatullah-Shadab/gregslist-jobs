@@ -7,7 +7,7 @@ const Job = new Schema(
     position: { type: String, required: true },
     qualification: { type: String, required: true },
     benifits: { type: String, required: true },
-    shift: { type: String },
+    shift: { type: String, required: true },
     salary: { type: Number, required: true, default: 0 }
   },
   { timestamps: true, toJSON: { virtuals: true } }
