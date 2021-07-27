@@ -36,4 +36,14 @@ export class JobsController extends BaseController {
       next(error)
     }
   }
+
+  async edit(req, res, next) {
+    try {
+      req.body.id = req.params.id
+      const job = await jobsService.edit(req.body)
+      res.send(job)
+    } catch (error) {
+      next(error)
+    }
+  }
 }
